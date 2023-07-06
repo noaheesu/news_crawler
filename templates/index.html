@@ -6,8 +6,8 @@
 
 </head>
 <body>
-    <h1>Latest IT News</h1>
-
+    <h1>Latest IT News </h1>
+<h3 style="text-align: center;">Current time: <span id="time"></span></h3>
     <h2>BBC Technology:</h2>
     <ul>
         {% for title, url in bbc_titles_and_urls %}
@@ -30,3 +30,8 @@
     </ul>
 </body>
 </html>
+
+<script>
+    var datetime = new Date();
+    document.getElementById("time").textContent = datetime;
+</script>
