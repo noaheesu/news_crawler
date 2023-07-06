@@ -1,64 +1,32 @@
-<!-- <link rel="stylesheet" href="styles.css">
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Scraped Titles</title>
-</head>
-<body>
-    <h1>Scraped Titles:</h1>
-    <ul>
-        {% for title, url in titles_and_urls %}
-        <li><a href="{{ url }}" target="_blank">{{ title }}</a></li>
-        {% endfor %}
-    </ul>
-</body>
-</html> -->
-
-
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Latest IT News</title>
-    <!-- <link rel="stylesheet" href="styles.css"> -->
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 
 </head>
 <body>
     <h1>Latest IT News</h1>
 
-    <div class="block">
-        <h2 class="block-title">BBC Technology</h2>
-        <ul>
-            {% for title in bbc_titles %}
-            <li><a href="https://www.bbc.com/news/technology">{{ title }}</a></li>
-            {% endfor %}
-        </ul>
-    </div>
+    <h2>BBC Technology:</h2>
+    <ul>
+        {% for title, url in bbc_titles_and_urls %}
+        <li><a href="{{ url }}" target="_blank">{{ title }}</a></li>
+        {% endfor %}
+    </ul>
 
-    <div class="block">
-        <h2 class="block-title">USA TODAY News</h2>
-        <ul>
-            {% for title in usa_titles %}
-            <li><a href="https://www.usatoday.com/tech/">{{ title }}</a></li>
-            {% endfor %}
-        </ul>
-    </div>
+    <h2>USA Today Tech:</h2>
+    <ul>
+        {% for title, url in usa_today_titles_and_urls %}
+        <li><a href="{{ url }}" target="_blank">{{ title }}</a></li>
+        {% endfor %}
+    </ul>
 
-    <div class="block">
-        <h2 class="block-title">Venture News</h2>
-        <ul>
-            {% for title in venture_titles %}
-            <li><a href="https://venturebeat.com/">{{ title }}</a></li>
-            {% endfor %}
-        </ul>
-    </div>
+    <h2>VentureBeat:</h2>
+    <ul>
+        {% for title, url in venturebeat_titles_and_urls %}
+        <li><a href="{{ url }}" target="_blank">{{ title }}</a></li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
-
-
-
-
-
-
